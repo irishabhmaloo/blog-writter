@@ -14,6 +14,7 @@ export default function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await axios.get("https://blog-writter.vercel.app/api/posts" + search);
+      console.log(res);
       setPosts(res.data);
     };
     fetchPosts();
