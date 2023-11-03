@@ -37,6 +37,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://blog-writter-git-main-rishabh-maloos-projects.vercel.app/api/"
+  "proxy": "https://blog-writter.vercel.app/api/"
   
 }
