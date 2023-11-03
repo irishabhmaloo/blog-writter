@@ -9,7 +9,7 @@ export default function Posts({ posts }) {
           <Post post={p} key={p.id} />
         ))
       ) : (
-        <h1>No posts available</h1>
+        <h1>No</h1>
       )}
     </div>
   );
