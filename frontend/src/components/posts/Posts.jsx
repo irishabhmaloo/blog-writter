@@ -4,7 +4,7 @@ import "./posts.css";
 export default function Posts({ posts }) {
   return (
     <div className="posts">
-      {posts.length > 0 ? (
+      {Array.isArray(posts) && posts.length > 0 ? (
         posts.map((p) => (
           <Post post={p} key={p.id} />
         ))
