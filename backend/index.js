@@ -8,7 +8,6 @@ const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
-const cors = require('cors');
 
 dotenv.config();
 app.use(express.json());
@@ -37,13 +36,6 @@ const upload = multer({ storage: storage });
 app.post("/api/upload", upload.single("file"), (req, res) => {
   res.status(200).json("File has been uploaded");
 });
-
-const corsOptions = {
-  origin: 'https://blog-writter.vercel.app',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-};
-
-app.use(cors(corsOptions));
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
