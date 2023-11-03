@@ -30,7 +30,7 @@ export default function Sidebar() {
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
           {
-            Array.isArray(s) ?
+            Array.isArray(cats) ?
               cats.map((c) => (
                 <Link to={`/?cat=${c.name}`} className="link">
                 <li className="sidebarListItem">{c.name}</li>
