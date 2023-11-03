@@ -8,19 +8,6 @@ const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
-const cors = require('cors');
-const { createProxyMiddleware } = require('http-proxy-middleware');
-
-app.use(cors());
-
-app.use('/api', createProxyMiddleware({ 
-    target: 'http://localhost:8080/', //original url
-    changeOrigin: true, 
-    //secure: false,
-    onProxyRes: function (proxyRes, req, res) {
-       proxyRes.headers['Access-Control-Allow-Origin'] = '*';
-    }
-}));
 
 dotenv.config();
 app.use(express.json());
